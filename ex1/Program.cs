@@ -1,12 +1,16 @@
-﻿//void ShowNums (int num)
-//{
-//    Console.Write(num + " ");
-//    if (num>1) ShowNums(num - 1);   
-//}
+﻿Console.WriteLine("Задание первое (64)");
 
-//ShowNums(5);
+void ShowNums (int n)
+{
+    Console.Write(n + " ");
+    if (n>1) ShowNums(n - 1);   
+}
+ShowNums(5);
+ShowNums(8);
 
-int SumNums (int m, int n) {
+Console.WriteLine("Задание второе (66)");
+
+int Summa (int m, int n) {
     int sum =0;
     if (m<n) {
         while (n>=m) {
@@ -25,4 +29,22 @@ int SumNums (int m, int n) {
     }
     return sum;
 }
-Console.Write(SumNums(1, 15));
+Console.WriteLine(Summa(1, 15));
+Console.WriteLine(Summa(4,8));
+
+Console.WriteLine("Задание третье (68)");
+
+static uint Akk(uint n, uint m)
+{
+    if (n == 0)
+        return m + 1;
+    else
+      if ((n != 0) && (m == 0))
+        return Akk(n - 1, 1);
+    else
+        return Akk(n - 1, Akk(n, m - 1));
+}
+ 
+Console.WriteLine(Akk(2, 3));
+Console.WriteLine(Akk(3, 2));
+
